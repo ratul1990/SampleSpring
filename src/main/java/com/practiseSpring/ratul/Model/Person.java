@@ -1,4 +1,4 @@
-package Model;
+package com.practiseSpring.ratul.Model;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
