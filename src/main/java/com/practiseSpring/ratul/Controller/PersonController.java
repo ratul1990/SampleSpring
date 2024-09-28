@@ -19,10 +19,10 @@ public class PersonController {
     @PutMapping(path="/save", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> savePersonDetails(@Valid @RequestBody Person person)
     {
-        System.out.println("test1");
-        boolean status=true;
-        status=!personManager.savePersonDetails(person);
-        if(!status)
+        System.out.println("prod");
+        boolean status=false;
+        status=personManager.savePersonDetails(person);
+        if(status)
         {
             return new ResponseEntity<>(HttpStatus.OK);
         }
